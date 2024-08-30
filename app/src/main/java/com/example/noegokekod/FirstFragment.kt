@@ -22,11 +22,42 @@ class FirstFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
 
+        switchDurum()
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+
+    private fun switchDurum(){
+        binding.switchEgo.setOnCheckedChangeListener { _, isChecked ->
+
+
+
+            binding.happinessSwitch.isChecked = false
+            binding.optimismSwitch.isChecked = false
+            binding.givingSwitch.isChecked = false
+            binding.respectSwitch.isChecked = false
+            binding.kindnessSwitch.isChecked = false
+
+            val duration = 300L // Animasyon süresi (milisaniye)
+            binding.happinessSwitch.animate().alpha(if (isChecked) 0.5f else 1f).setDuration(duration)
+                .withEndAction { binding.happinessSwitch.isEnabled = !isChecked }
+            binding.optimismSwitch.animate().alpha(if (isChecked) 0.5f else 1f).setDuration(duration)
+                .withEndAction { binding.optimismSwitch.isEnabled = !isChecked }
+            binding.givingSwitch.animate().alpha(if (isChecked) 0.5f else 1f).setDuration(duration)
+                .withEndAction { binding.givingSwitch.isEnabled = !isChecked }
+            binding.respectSwitch.animate().alpha(if (isChecked) 0.5f else 1f).setDuration(duration)
+                .withEndAction { binding.respectSwitch.isEnabled = !isChecked }
+            binding.kindnessSwitch.animate().alpha(if (isChecked) 0.5f else 1f).setDuration(duration)
+                .withEndAction { binding.kindnessSwitch.isEnabled = !isChecked }
+        }
     }
 }
