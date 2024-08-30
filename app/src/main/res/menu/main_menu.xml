@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/firstFragment"
+
+        android:title="Happiness" />
+
+    <item
+        android:id="@+id/optimismSwitch"
+
+        android:title="Optimisim" />
+
+    <item
+        android:id="@+id/givingSwitch"
+
+        android:title="Giving" />
+
+    <item
+        android:id="@+id/respectSwitch"
+
+        android:title="Respect" />
+
+    <item
+        android:id="@+id/kindnessSwitch"
+
+        android:title="Kindness" />
+
+</menu>
