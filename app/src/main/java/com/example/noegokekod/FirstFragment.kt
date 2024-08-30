@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.noegokekod.databinding.FragmentFirstBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class FirstFragment : Fragment() {
-
+    private lateinit var navController: NavController
     private  var bottomNavigationView : BottomNavigationView? = null
     private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
@@ -34,6 +37,18 @@ class FirstFragment : Fragment() {
 
 
         switchDurum()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        binding.happinessSwitch.setOnCheckedChangeListener{_, isChecked ->
+            if (isChecked) {
+
+            }
+        }
+
 
     }
 
