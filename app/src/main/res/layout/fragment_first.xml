@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="32dp"
-        android:padding="5dp"
+        android:padding="25dp"
         android:layout_gravity="center"
         android:gravity="center|left"
         >
@@ -24,63 +24,69 @@
             android:checked="true"
             android:layout_weight="3"
             android:textAlignment="textEnd"
-
+            android:layout_marginRight="5dp"
             />
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/happinessSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Switch 1"
+            android:text="Happiness"
             android:enabled="false"
             android:layout_weight="3"
-            android:textAlignment="textEnd"/>
+            android:textAlignment="textEnd"
+            android:layout_marginRight="5dp"
+            />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/optimismSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Switch 2"
+            android:text="Optimism"
             android:enabled="false"
             android:layout_weight="3"
-            android:textAlignment="textEnd"/>
+            android:textAlignment="textEnd"
+            android:layout_marginRight="5dp"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="32dp"
-        android:padding="5dp"
+        android:padding="25dp"
 
         >
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/givingSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch 3"
+            android:text="Giving"
             android:enabled="false"
             android:layout_weight="3"
             android:textAlignment="textEnd"
-
+            android:layout_marginRight="5dp"
             />
         <Switch
-            android:id="@+id/switch4"
+            android:id="@+id/respectSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch 4"
+            android:text="Respect"
             android:enabled="false"
             android:layout_weight="3"
             android:textAlignment="textEnd"
+            android:layout_marginRight="5dp"
             />
 
         <Switch
-            android:id="@+id/switch5"
+            android:id="@+id/kindnessSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Switch 5"
+            android:text="Kindness"
             android:enabled="false"
             android:layout_weight="3"
             android:textAlignment="textEnd"
+            android:layout_marginRight="5dp"
             />
     </LinearLayout>
 
