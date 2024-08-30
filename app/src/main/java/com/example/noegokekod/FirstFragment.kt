@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.noegokekod.databinding.FragmentFirstBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class FirstFragment : Fragment() {
 
+    private  var bottomNavigationView : BottomNavigationView? = null
     private var _binding: FragmentFirstBinding? = null
     private val binding get() = _binding!!
 
@@ -19,6 +21,11 @@ class FirstFragment : Fragment() {
     ): View? {
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        // BottomNavigationView'a erişmek için
+        bottomNavigationView = activity?.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView!!.visibility = View.GONE // Gizle
+
         return view
     }
 
@@ -37,9 +44,14 @@ class FirstFragment : Fragment() {
 
 
     private fun switchDurum(){
+
         binding.switchEgo.setOnCheckedChangeListener { _, isChecked ->
 
-
+            if (isChecked){
+                bottomNavigationView!!.visibility = View.GONE
+            } else  {
+                bottomNavigationView!!.visibility = View.VISIBLE
+            }
 
             binding.happinessSwitch.isChecked = false
             binding.optimismSwitch.isChecked = false
